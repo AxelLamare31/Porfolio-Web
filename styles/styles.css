@@ -73,3 +73,8 @@ body{
   .main-nav{display:none}
   .project .media{flex-basis:140px}
 }
+
+@media (min-width:1200px){
+  /* Slightly larger showreel on wide screens */
+  .showreel-frame{max-width:420px}
+}
