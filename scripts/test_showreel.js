@@ -48,6 +48,16 @@ const puppeteer = require('puppeteer');
   console.log('Paused state:', paused);
   if(paused) res.errors.push('Video is paused (should be playing)');
 
+  // check rendered aspect ratio (width/height ≈ 9/16 = 0.5625)
+  const ratio = await page.evaluate(()=>{
+    const v = document.getElementById('showreelVideo');
+    if(!v) return null;
+    const r = v.getBoundingClientRect();
+    return r.width / r.height;
+  });
+  console.log('Rendered aspect ratio:', ratio);
+  if(!ratio || Math.abs(ratio - (9/16)) > 0.03) res.errors.push('Rendered aspect ratio is incorrect (not ~9:16)');
+
   if(res.errors.length){
     console.error('TEST FAILED:', res.errors);
     await browser.close();
