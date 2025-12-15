@@ -36,14 +36,14 @@ body{
 .btn{display:inline-block;padding:.8rem 1.2rem;background:transparent;border:1px solid rgba(255,47,161,0.18);color:var(--text);border-radius:10px;text-decoration:none;backdrop-filter:blur(4px)}
 
 .showreel{display:flex;align-items:center;justify-content:center;margin:3rem 0}
-.showreel-frame{position:relative;display:block;width:100%;max-width:360px;margin:0 auto;z-index:20}
+.showreel-frame{position:relative;display:block;width:100%;max-width:360px;margin:0 auto;z-index:20;border-radius:16px;overflow:hidden}
 .showreel-video{width:100%;height:auto;aspect-ratio:9/16;border-radius:16px;box-shadow:0 6px 30px rgba(255,47,161,0.08);border:1px solid rgba(255,47,161,0.05);display:block;position:relative;z-index:22}
 .tiktok-wrapper{width:100%;display:flex;align-items:center;justify-content:center}
 .tiktok-embed{border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(255,47,161,0.06);border:1px solid rgba(255,47,161,0.04)}
 .neon-train{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
 .neon-train svg{width:100%;height:100%;display:block}
-.neon-train .train-base{stroke:rgba(255,47,161,0.08);stroke-width:1}
-.neon-train .train-seg{stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-dasharray:8 260;filter:drop-shadow(0 0 8px rgba(255,47,161,0.9));animation:dash 2.8s linear infinite}
+.neon-train .train-base{stroke:rgba(255,47,161,0.06);stroke-width:0.6;opacity:0.9}
+.neon-train .train-seg{stroke:var(--accent);stroke-width:0.9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4 250;filter:drop-shadow(0 0 6px rgba(255,47,161,0.35));animation:dash 18s linear infinite;opacity:0.75}
 
 @keyframes dash{to{stroke-dashoffset:-1000}}
 .mute-toggle{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,0.35);color:var(--text);border:1px solid rgba(255,47,161,0.12);padding:.5rem .8rem;border-radius:999px;backdrop-filter:blur(6px);cursor:pointer;font-weight:600;z-index:40}

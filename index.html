@@ -43,8 +43,9 @@
             <button id="muteToggle" class="mute-toggle" aria-pressed="true" aria-label="Activer le son">Activer le son</button>
 
             <svg class="neon-train" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect class="train-base" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
-              <rect class="train-seg" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
+              <!-- tighter inset so the stroke hugs the video edge -->
+              <rect class="train-base" x="1" y="1" width="98" height="98" rx="10" ry="10" fill="none" />
+              <rect class="train-seg" x="1" y="1" width="98" height="98" rx="10" ry="10" fill="none" />
             </svg>
           </div>
         </section>
