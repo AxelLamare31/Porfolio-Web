@@ -35,12 +35,17 @@
 
         <section id="showreel" class="showreel container">
           <div class="showreel-frame">
-            <video id="showreelVideo" class="showreel-video" controls autoplay muted loop playsinline poster="assets/showreel.jpg" preload="metadata">
-                <source src="assets/showreel.mp4" type="video/mp4">
-                <source src="assets/showreel.webm" type="video/webm">
+            <video id="showreelVideo" class="showreel-video" controls autoplay muted loop playsinline poster="assets/showreel.opt.jpg" preload="metadata">
+                <source src="assets/showreel.opt.mp4" type="video/mp4">
+                <source src="assets/showreel.opt.webm" type="video/webm">
                Votre navigateur ne supporte pas la lecture vidéo.
             </video>
             <button id="muteToggle" class="mute-toggle" aria-pressed="true" aria-label="Activer le son">Activer le son</button>
+
+            <svg class="neon-train" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="train-base" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
+              <rect class="train-seg" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
+            </svg>
           </div>
         </section>
 
