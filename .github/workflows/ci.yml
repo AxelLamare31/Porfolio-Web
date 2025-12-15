@@ -1,0 +1,36 @@
+name: CI - showreel
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 8000 &
+          echo "Started python server"
+
+      - name: Wait for server to be ready
+        run: |
+          for i in {1..20}; do
+            curl -sSf http://127.0.0.1:8000 && break || sleep 1
+          done
+
+      - name: Run showreel test
+        run: npm test
