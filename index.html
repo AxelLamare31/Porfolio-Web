@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SOCIAL VIDEO EDITOR — Axel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">SOCIAL VIDEO EDITOR</a>
+        <nav class="main-nav">
+          <a href="#showreel">Showreel</a>
+          <a href="#projects">Projets</a>
+          <a href="#about">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+        <div id="neon-cursor" class="neon-cursor" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 class="hero-title">SOCIAL VIDEO EDITOR</h1>
+            <p class="hero-sub">TikTok • Reels • Ads</p>
+            <p class="hero-cta"><a class="btn" href="#showreel">Voir le showreel</a></p>
+          </div>
+        </div>
+      </section>
+
+        <section id="showreel" class="showreel container">
+          <div class="showreel-frame">
+            <video id="showreelVideo" class="showreel-video" controls autoplay muted loop playsinline poster="assets/showreel.opt.jpg" preload="metadata">
+                <source src="assets/showreel.opt.mp4" type="video/mp4">
+                <source src="assets/showreel.opt.webm" type="video/webm">
+               Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+            <button id="muteToggle" class="mute-toggle" aria-pressed="true" aria-label="Activer le son">Activer le son</button>
+
+            <svg class="neon-train" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="train-base" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
+              <rect class="train-seg" x="2" y="2" width="96" height="96" rx="8" ry="8" fill="none" />
+            </svg>
+          </div>
+        </section>
+
+      
+
+      <section id="about" class="about container">
+        <h2>À propos</h2>
+        <p>Phrase courte présentant votre expérience, vos compétences clés, et ce que vous recherchez.</p>
+      </section>
+
+      <section id="projects" class="projects container">
+        <h2>Projets</h2>
+        <div class="projects-list">
+          <article class="project">
+            <div class="media video">
+              <video src="assets/project1.mp4" loop muted playsinline autoplay></video>
+            </div>
+            <div class="meta">PROJECT 01 — TikTok Campaign</div>
+          </article>
+
+          <article class="project">
+            <div class="media image">
+              <img src="assets/project2.jpg" alt="Project 2">
+            </div>
+            <div class="meta">PROJECT 02 — Reels Promo</div>
+          </article>
+
+          <article class="project">
+            <div class="media video">
+              <video src="assets/project3.mp4" loop muted playsinline autoplay></video>
+            </div>
+            <div class="meta">PROJECT 03 — Ads Short</div>
+          </article>
+
+          <article class="project">
+            <div class="media image">
+              <img src="assets/project4.jpg" alt="Project 4">
+            </div>
+            <div class="meta">PROJECT 04 — Branded Content</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <p class="contact-list">Mail: <a href="mailto:mail@example.com">mail@example.com</a> — Instagram: <a href="https://instagram.com/" target="_blank" rel="noopener">@votrecompte</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Axel. Tous droits réservés.</small>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

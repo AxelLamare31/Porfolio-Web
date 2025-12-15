@@ -1,0 +1,11 @@
+{
+  "name": "porfolio-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/test_showreel.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.33.0"
+  }
+}
